@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "pkief.material-icon-theme",
+    "csstools.postcss",
+    "formulahendry.auto-rename-tag",
+    "editorconfig.editorconfig",
+    "bradlc.vscode-tailwindcss",
+    "kelset.rn-full-pack",
+    "msjsdiag.vscode-react-native"
+  ]
+}
