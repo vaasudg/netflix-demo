@@ -8,6 +8,7 @@
     "editorconfig.editorconfig",
     "bradlc.vscode-tailwindcss",
     "kelset.rn-full-pack",
-    "msjsdiag.vscode-react-native"
+    "msjsdiag.vscode-react-native",
+    "github.vscode-github-actions"
   ]
 }
