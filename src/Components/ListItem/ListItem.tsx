@@ -1,17 +1,16 @@
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 // import useLazyLoading from 'src/hooks/useLazyLoading'
-import { DataResponseI, ResultItemI } from 'src/utils/interfaces/list.interface'
+import { ResultItemI } from 'src/utils/interfaces/list.interface'
 import LikeButton from '../common/buttons/LikeButton'
 import './ListItem.css'
-import { ScrollContext } from 'src/context/Context'
 
 // const List = ({ result, id }: DataResponseI) => {
 const List = ({ result, scrollValue, setScrollValue }: any) => {
   // const isImgloaded = useLazyLoading('.lazy')
+  // @ts-ignore
   const [isImgloaded, setisImgLoaded] = useState(false)
 
   const observerRef = useRef<IntersectionObserver | null>(null)
-  const { state } = useContext(ScrollContext)
 
   useEffect(() => {
     const lazyImages = document.querySelectorAll('.lazy')
