@@ -15,16 +15,15 @@ const MovieList = ({ url, title }: any) => {
     return data
   }, [url])
 
-  // @ts-ignore
   const imageData: DataResponseI | any = useFetchImageData(fetchImageData)
 
-  const onPrevSlide = async (e: any) => {
+  const onPrevSlide = async () => {
     if (scrollValue > 0) {
       setScrollValue(prevScrollValue => prevScrollValue - 350)
     }
   }
 
-  const onNextSlide = async (e: any) => {
+  const onNextSlide = async () => {
     const element = document.querySelector('.lists') as HTMLElement
     if (element.clientWidth > scrollValue) {
       setScrollValue(prevScrollValue => prevScrollValue + 350)

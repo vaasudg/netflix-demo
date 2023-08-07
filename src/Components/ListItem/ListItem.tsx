@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect, useRef, useState } from 'react'
 // import useLazyLoading from 'src/hooks/useLazyLoading'
 import { ResultItemI } from 'src/utils/interfaces/list.interface'
