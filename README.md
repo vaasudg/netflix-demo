@@ -4,7 +4,8 @@
 
 ## Live
 
-| Link | [https://vaasudg.github.io/netflix-demo/][PlDb] |
+| Link | [https://vaasudg.github.io/netflix-demo/] |
+See in the live action [Link](https://vaasudg.github.io/netflix-demo/) (optional).
 
 ## `npm start`
 
