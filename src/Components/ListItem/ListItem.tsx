@@ -7,7 +7,7 @@ import './ListItem.css'
 // const List = ({ result, id }: DataResponseI) => {
 const List = ({ result, scrollValue, setScrollValue }: any) => {
   // const isImgloaded = useLazyLoading('.lazy')
-  const [_isImgloaded, setisImgLoaded] = useState(false)
+  const [isImgloaded, setisImgLoaded] = useState(false)
 
   const observerRef = useRef<IntersectionObserver | null>(null)
 

@@ -89,7 +89,7 @@
   }
 
   .banner .sub__title p {
-    max-width: 400px;
+    width: 280px;
     font-size: 1rem;
   }
 
@@ -99,5 +99,13 @@
 
   .banner__play-button {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-device-width: 414px) and (max-device-width: 896px) {
+  .banner .sub__title p {
+    width: 280px;
+    padding: 5px;
+    margin: 0 auto 40px;
   }
 }

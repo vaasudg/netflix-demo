@@ -1,9 +1,13 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import App from './App'
 
-test('renders learn react link', () => {
-  // render(<App />)
-  // const linkElement = screen.getByText(/Demo/i)
-  // expect(linkElement).toBeInTheDocument()
-  expect(1).toEqual(1)
+test('App component renders correctly', () => {
+  const { getByTestId } = render(<App />)
+  const bannerElement = getByTestId('banner')
+  expect(bannerElement).toBeInTheDocument()
+})
+
+test('App component renders correctly', () => {
+  const { asFragment } = render(<App />)
+  expect(asFragment()).toMatchSnapshot()
 })

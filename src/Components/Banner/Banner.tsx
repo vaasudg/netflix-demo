@@ -3,6 +3,7 @@ const Banner = () => {
   return (
     <div
       className='banner'
+      data-testid='banner'
       style={{
         backgroundImage: `url(
           'https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701122086.jpg'

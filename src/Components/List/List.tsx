@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState } from 'react'
+import { Fragment, useCallback, useContext, useState } from 'react'
 import List from 'src/Components/ListItem/ListItem'
 import { ScrollContext } from 'src/context/Context'
 import useFetchImageData from 'src/hooks/useFetchImageData'
@@ -36,14 +36,14 @@ const MovieList = ({ url, title }: any) => {
       <h1 className='movie__title'>{title}</h1>
       <div className='movie__app'>
         {/* Previous arrow */}
-        <button onClick={onPrevSlide} className='nav__button prev'>
+        <button onClick={onPrevSlide} className='nav__button prev' aria-label='previous'>
           &#8249;
         </button>
         {/* Main List */}
 
         <List result={imageData?.result} scrollValue={scrollValue} setScrollValue={setScrollValue} />
         {/* Next arrow */}
-        <button onClick={onNextSlide} className='nav__button next'>
+        <button onClick={onNextSlide} className='nav__button next' aria-label='next'>
           &#8250;
         </button>
       </div>

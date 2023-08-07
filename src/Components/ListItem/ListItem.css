@@ -13,7 +13,7 @@
 .lists__container .list {
   margin: 0px 2px;
   padding: 10px 30px;
-  font-size: 25px;
+  font-size: 1.6rem;
   position: relative;
 }
 
@@ -23,7 +23,7 @@
   background: rgba(255, 255, 255, 0.8);
   width: 200px;
   height: 31px;
-  font-size: 15px;
+  font-size: 1rem;
   text-align: center;
   line-height: 2;
   box-shadow: 0 1px 0 0 #eaeaea;
@@ -41,6 +41,7 @@
   transform-style: preserve-3d;
   background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   width: 200px;
   height: 280px;
   transition: all 0.5s;
