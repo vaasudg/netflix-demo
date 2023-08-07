@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest/globals": true
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.{ts,tsx}"]
+    }
+  ],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "tsx": true,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "jest", "prettier"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "jest": {
+      "version": "detect",
+      "globalAliases": {
+        "describe": ["context"],
+        "fdescribe": ["fcontext"],
+        "xdescribe": ["xcontext"]
+      }
+    }
+  },
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "space-before-function-paren": [
+      0,
+      { "anonymous": "always", "named": "always" }
+    ],
+    "camelcase": 0,
+    "no-return-assign": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/display-name": 0,
+    "linebreak-style": ["error", "unix"],
+    "quotes": [
+      "error",
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
+    "semi": ["error", "never"]
+  }
+}
