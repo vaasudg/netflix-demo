@@ -37,13 +37,7 @@
     }
   },
   "rules": {
-    "no-unused-vars": [
-      "warn",
-      {
-        "args": "after-used",
-        "varsIgnorePattern": "^_"
-      }
-    ],
+    "no-unused-vars": "off",
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "space-before-function-paren": [
       0,
