@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+# Project Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Deployment on dev](https://github.com/vaasudg/netflix-demo/actions/workflows/workflow.dev.yml/badge.svg)](https://github.com/vaasudg/netflix-demo/actions/workflows/workflow.dev.yml)
 
-## Available Scripts
+## Live
 
-In the project directory, you can run:
+| Link | [https://vaasudg.github.io/netflix-demo/][PlDb] |
 
-### `npm start`
+## `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,33 +14,36 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+## `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## _Overview_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is a Proof of Concept (POC) to showcase the creation of a simple web application with a structure similar to Netflix using ReactJS, TypeScript, JavaScript, HTML, and CSS. We will be using GitHub for version control and GitHub Actions for continuous integration and continuous delivery (CI/CD).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+1. Create a GitHub Repository
+   Start by creating a new GitHub repository. You can do this by clicking on the "+" icon on the top right corner of the GitHub interface and selecting "New repository".
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Set Up Your Development Environment
+   Ensure you have Node.js, npm, and a text editor (like VSCode) installed on your machine. Clone the repository to your local machine to begin development.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Create a Page with Image Carousel and Horizontal Rows
+   We'll begin by creating a page with an image carousel and horizontal rows of items, similar to Netflix's interface. We'll use hardcoded JSON data to fetch the information and display it on the page. You can use either function or class components, depending on your preference.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Write Unit Tests
+   For this project, we will be using Jest and the React Testing Library for unit testing.
 
-## Learn More
+3. Error Handling
+   We'll be handling network errors, server downtime, and 4XX errors using error boundaries in React and the fetch API. CI/CD We will be using GitHub Actions to implement a simple CI/CD pipeline. This pipeline will run our unit tests and build our project whenever we push to the main branch. You can download a sample CI/CD configuration from the GitHub Actions Marketplace and modify it to suit your needs.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Conclusion
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project does not require hosting and can be run on a local machine.
