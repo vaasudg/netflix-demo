@@ -1,18 +1,28 @@
-import { Fragment, useCallback, useContext, useState } from 'react'
+import { useCallback, useContext, useState } from 'react'
 import List from 'src/Components/ListItem/ListItem'
 import { ScrollContext } from 'src/context/Context'
 import useFetchImageData from 'src/hooks/useFetchImageData'
 import { DataResponseI } from 'src/utils/interfaces/list.interface'
 import './List.css'
+import ErrorBountary from '../common/Error/Error'
 
 const MovieList = ({ url, title }: any) => {
   const { state, dispatch } = useContext(ScrollContext)
   const [scrollValue, setScrollValue] = useState(state.scrollValue)
+  const [error, setError] = useState()
+  const [loading, setLoading] = useState(false)
 
   const fetchImageData = useCallback(async () => {
-    const resp = await fetch(url)
-    const data = await resp.json()
-    return data
+    try {
+      const resp = await fetch(url)
+      const data = await resp.json()
+      setLoading(true)
+      return data
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
   }, [url])
 
   const imageData: DataResponseI | any = useFetchImageData(fetchImageData)
@@ -30,7 +40,9 @@ const MovieList = ({ url, title }: any) => {
       dispatch({ type: 'SET_SCROLL', payload: state.scrollValue + 350 })
     }
   }
-
+  if (error) {
+    return <ErrorBountary error={error} />
+  }
   return (
     <>
       <h1 className='movie__title'>{title}</h1>
