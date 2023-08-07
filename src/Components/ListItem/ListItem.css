@@ -1,0 +1,77 @@
+.lists__container {
+  height: 330px;
+  box-shadow: 0 100px 10px inset;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.lists {
+  width: 100%;
+  display: flex;
+  transition: all 0.5s;
+}
+
+.lists__container .list {
+  margin: 0px 2px;
+  padding: 10px 30px;
+  font-size: 25px;
+  position: relative;
+}
+
+.lists__container .list__title {
+  position: absolute;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 200px;
+  height: 31px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 2;
+  box-shadow: 0 1px 0 0 #eaeaea;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lists__container .image__holder {
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border: none;
+  background: linear-gradient(-90deg, #cf77f3 0%, #009bff 47%, #2ac9db 100%);
+  position: relative;
+  transform-style: preserve-3d;
+  background-size: 100%;
+  background-position: center;
+  width: 200px;
+  height: 280px;
+  transition: all 0.5s;
+}
+
+.lists__container .image__holder:hover {
+  background-size: 125%;
+}
+
+.lists__container .image__holder::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  background: inherit;
+  filter: blur(20px);
+  transform: translate3d(15px, 15px, -1px);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.lists__container .like__button-holder {
+  position: absolute;
+  bottom: 45px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .lists {
+    width: 2110px;
+  }
+  .lists__container .image__holder::before {
+    transform: translate3d(2px, 2px, -1px);
+  }
+}

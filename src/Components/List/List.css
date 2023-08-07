@@ -1,0 +1,47 @@
+.movie__title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 20px 0 0 10px;
+  text-shadow: 0 0px 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.movie__title:first-letter {
+  font-size: 2rem;
+}
+
+.movie__app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.movie__app .nav__button {
+  width: 100px;
+  height: 200px;
+  border: none;
+  font-size: 3.5rem;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  opacity: 0.4;
+  transition: all 0.2s;
+}
+.movie__app .nav__button:hover {
+  font-size: 5rem;
+  opacity: 1;
+}
+
+.nav__button > .prev {
+}
+
+.nav__button > .next {
+}
+
+@media (max-width: 768px) {
+  .movie__app .nav__button {
+    width: 300px;
+  }
+}

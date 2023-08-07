@@ -1,9 +1,13 @@
+import Banner from './Components/Banner/Banner'
+import MovieList from './Pages/MovieList/Home'
+import { Provider } from './context/Context'
+
 function App() {
   return (
-    <div>
-      Demo
-      <p className='text-red-500'>Welcome!!!....!!!!OWOWOWOW</p>
-    </div>
+    <Provider>
+      <Banner />
+      <MovieList />
+    </Provider>
   )
 }
 

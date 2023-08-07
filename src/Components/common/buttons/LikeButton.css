@@ -1,0 +1,72 @@
+.like__button {
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+
+.like__button i {
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0 15px;
+  color: #ffffff;
+  transition: 0.2s;
+  font-style: normal;
+}
+
+.like__button i:hover {
+  color: #666;
+}
+
+.like__button i:before {
+  font-style: normal;
+}
+
+.like__button span {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  transition: 0.6s;
+  z-index: -2;
+  font-size: 2px;
+  color: transparent;
+  font-weight: 400;
+}
+
+.like__button i.press {
+  animation: size 0.4s;
+  color: #e23b3b;
+}
+
+.like__button span.press {
+  bottom: 120px;
+  font-size: 14px;
+  visibility: visible;
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  0% {
+    color: #transparent;
+  }
+  50% {
+    color: #e23b3b;
+  }
+  100% {
+    color: #transparent;
+  }
+}
+
+@keyframes size {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
