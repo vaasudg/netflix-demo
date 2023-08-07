@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
 const useFetchImageData = (fetchDataFunction: any) => {
-    const [imageData, setImageData] = useState<any[]>([]);
+  const [imageData, setImageData] = useState<any[]>([])
 
-    useEffect(() => {
-        let isMounted = true;
+  useEffect(() => {
+    let isMounted = true
 
-        const fetchData = async () => {
-            const data: any = await fetchDataFunction();
-            if (isMounted) {
-                setImageData(data);
-            }
-        };
+    const fetchData = async () => {
+      const data: any = await fetchDataFunction()
+      if (isMounted) {
+        setImageData(data)
+      }
+    }
 
-        fetchData();
+    fetchData()
 
-        return () => {
-            isMounted = false;
-        };
-    }, [fetchDataFunction]);
+    return () => {
+      isMounted = false
+    }
+  }, [fetchDataFunction])
 
-    return imageData;
-};
+  return imageData
+}
 
-export default useFetchImageData;
+export default useFetchImageData
